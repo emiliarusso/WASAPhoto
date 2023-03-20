@@ -65,5 +65,6 @@ export default {
 <style>
 .modal textarea {
 	font-family: "DejaVu Sans Mono", monospace;
+	background-color: #e38150;
 }
 </style>

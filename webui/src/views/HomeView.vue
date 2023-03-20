@@ -280,8 +280,9 @@ export default {
 </script>
 
 <template>
-	<div>
+	<div class="page">
 		<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+            <div class="side">
 			<div class="position-sticky pt-3 sidebar-sticky">
 				<h6
 					class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
@@ -297,11 +298,13 @@ export default {
 						</RouterLink>
 					</li>
 				</ul>
+                
 			</div>
+        </div>
 		</nav>
 		<div
 			class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-			<h1 class="h2">Welcome back {{this.username }}</h1>
+			<h1 class="h2"> {{this.username }}'s stream</h1>
 			<div class="btn-toolbar mb-2 mb-md-0">
 				<div class="btn-group me-2">
 					<button class="btn btn-danger" type="button" @click="doLogout">Logout</button>
@@ -380,4 +383,27 @@ export default {
 </template>
 
 <style>
+.page{
+    background-color: #e38150;
+    height: 8000px;
+    margin-left: 0px;
+}
+.side{
+    background-color: #F2DDCC;
+    height: 8000px;
+    margin-right: 0px;
+}
+
+.btn-group button{
+    background-color: #FCAC89;
+    border-color: antiquewhite;
+
+}
+.input-group-append button{
+    background-color: #B9CDCB;
+    border-color: antiquewhite;
+}
+.card-body button{
+    border-color: antiquewhite;
+}
 </style>
