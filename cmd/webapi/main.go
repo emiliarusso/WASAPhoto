@@ -21,6 +21,7 @@ Return values (exit codes):
 Note that this program will update the schema of the database to the latest version available (embedded in the
 executable during the build).
 */
+
 package main
 
 import (
