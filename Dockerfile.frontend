@@ -1,4 +1,3 @@
-
 FROM node:lts as builder
 
 ### Copy Vue.js code

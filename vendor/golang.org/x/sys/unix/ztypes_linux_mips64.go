@@ -251,12 +251,6 @@ type Sigset_t struct {
 
 const _C__NSIG = 0x80
 
-const (
-	SIG_BLOCK   = 0x1
-	SIG_UNBLOCK = 0x2
-	SIG_SETMASK = 0x3
-)
-
 type Siginfo struct {
 	Signo int32
 	Code  int32
@@ -409,7 +403,7 @@ const (
 
 type SockaddrStorage struct {
 	Family uint16
-	Data   [118]byte
+	_      [118]int8
 	_      uint64
 }
 

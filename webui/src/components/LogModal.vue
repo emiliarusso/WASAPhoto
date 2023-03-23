@@ -5,6 +5,7 @@ export default {
 		return {
 		}
 	},
+
 	methods: {
 		async deleteComment(username, photoid, commentid ) {
 			try {
@@ -65,6 +66,5 @@ export default {
 <style>
 .modal textarea {
 	font-family: "DejaVu Sans Mono", monospace;
-	background-color: #e38150;
 }
 </style>
