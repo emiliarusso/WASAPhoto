@@ -1,6 +1,7 @@
 <script>
 import LogModal from "../components/Logmodal.vue";
 import SuccessMsg from "../components/SuccessMsg.vue";
+
 export default {
 	components: { LogModal, SuccessMsg },
 	data: function () {
@@ -243,6 +244,7 @@ export default {
 					this.detailedmsg = null;
 				}
 			}
+
 			try {
 				let response = await this.$axios.delete("/users/" + username + "/photo/" + id + "/like/" + this.like.likeId, {
 					headers: {
@@ -280,9 +282,8 @@ export default {
 </script>
 
 <template>
-	<div class="page">
+	<div>
 		<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-            <div class="side">
 			<div class="position-sticky pt-3 sidebar-sticky">
 				<h6
 					class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
@@ -298,13 +299,12 @@ export default {
 						</RouterLink>
 					</li>
 				</ul>
-                
 			</div>
-        </div>
 		</nav>
+		<div class="page">
 		<div
 			class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-			<h1 class="h2"> {{this.username }}'s stream</h1>
+			<h1 class="h2">Welcome back {{this.username }}</h1>
 			<div class="btn-toolbar mb-2 mb-md-0">
 				<div class="btn-group me-2">
 					<button class="btn btn-danger" type="button" @click="doLogout">Logout</button>
@@ -380,9 +380,11 @@ export default {
 			</div>
 		</div>
 	</div>
+	</div>
 </template>
 
 <style>
+
 .page{
     background-color: #e38150;
     height: 8000px;

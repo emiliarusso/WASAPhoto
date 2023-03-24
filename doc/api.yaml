@@ -17,14 +17,7 @@ info:
     Users profiles can be searched via username.
 
     The login is perfomed by specifying the username.
-  title: WASAPhoto API
-  version: 1.0.0
-  contact:
-    name: Lucian Dorin Crainic
-    email: crainic.1938430@studenti.uniroma1.it
-    url: https://github.com/LucianCrainic
-  license:
-    name: MIT
+  title: WASAPhoto 
 tags:
   - name: "Login"
     description: "Endpoints for logging in"

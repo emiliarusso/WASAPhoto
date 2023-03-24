@@ -1,5 +1,6 @@
 <script>
 import LogModal from "../components/Logmodal.vue";
+
 export default {
     components: { LogModal },
     data: function () {
@@ -157,6 +158,7 @@ export default {
                     this.detailedmsg = null;
                 }
             }
+
             try {
                 let response = await this.$axios.delete("/users/" + username + "/ban/" + this.ban.banId, {
                     headers: {
@@ -221,6 +223,7 @@ export default {
                     this.detailedmsg = null;
                 }
             }
+
             try {
                 let response = await this.$axios.delete("/users/" + username + "/follow/" + this.follow.followId, {
                     headers: {
@@ -241,6 +244,7 @@ export default {
                     this.detailedmsg = null;
                 }
             }
+
         },
         async sendComment(username, photoid, comment) {
             if (comment === "") {
@@ -333,6 +337,7 @@ export default {
                     this.detailedmsg = null;
                 }
             }
+
             try {
                 let response = await this.$axios.delete("/users/" + username + "/photo/" + id + "/like/" + this.like.likeId, {
                     headers: {
@@ -363,9 +368,7 @@ export default {
 </script>
 
 <template>
-    <div class="page">
     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-       <div class="side">
         <div class="position-sticky pt-3 sidebar-sticky">
             <h6
                 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
@@ -381,7 +384,6 @@ export default {
                     </RouterLink>
                 </li>
             </ul>
-        </div>
         </div>
     </nav>
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
@@ -479,9 +481,33 @@ export default {
         </div>
 
     </div>
-</div>
 
 </template>
 
 <style>
+
+.page{
+    background-color: #e38150;
+    height: 8000px;
+    margin-left: 0px;
+}
+.side{
+    background-color: #F2DDCC;
+    height: 8000px;
+    margin-right: 0px;
+}
+
+.btn-group button{
+    background-color: #FCAC89;
+    border-color: antiquewhite;
+
+}
+.input-group-append button{
+    background-color: #B9CDCB;
+    border-color: antiquewhite;
+}
+.card-body button{
+    border-color: antiquewhite;
+}
+
 </style>

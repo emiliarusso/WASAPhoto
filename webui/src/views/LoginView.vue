@@ -35,17 +35,22 @@ export default {
                     }
                 }
             }
+
         }
     },
     mounted() {
+
     }
+
 }
 </script>
 
 <template>
+    <div class="page1">
     <div
         class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Welcome to WASAPhoto</h1>
+        <h1 class="h2">Welcome to WASAPhoto!
+        </h1>
     </div>
     <div class="input-group mb-3">
         <input type="text" id="username" v-model="username" class="form-control"
@@ -56,7 +61,32 @@ export default {
         </div>
     </div>
     <ErrorMsg v-if="errormsg" :msg="errormsg"></ErrorMsg>
+</div>
 </template>
 
 <style>
+
+.page1{
+    background-color: #e38150;
+    height: 8000px;
+
+}
+.side{
+    background-color: #F2DDCC;
+    height: 8000px;
+    margin-right: 0px;
+}
+
+.btn-group button{
+    background-color: #FCAC89;
+    border-color: antiquewhite;
+
+}
+.input-group-append button{
+    background-color: #B9CDCB;
+    border-color: antiquewhite;
+}
+.card-body button{
+    border-color: antiquewhite;
+}
 </style>
