@@ -1,5 +1,5 @@
 <script>
-import LogModal from "../components/Logmodal.vue";
+import LogModal from "../components/LogModal.vue";
 import SuccessMsg from "../components/SuccessMsg.vue";
 
 export default {
